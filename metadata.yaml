@@ -1,0 +1,7 @@
+name: astrbot_plugin_grok_oauth
+display_name: Grok Oauth
+desc: 独立的 Grok OAuth 模型提供商，支持对话、OAuth额度查询、按需网页搜索、视觉、图片及视频生成编辑。
+version: v0.8.2
+author: RhoninSeiei
+repo: https://github.com/RhoninSeiei/astrbot_plugin_grok_oauth
+astrbot_version: ">=4.28.2,<5.0"

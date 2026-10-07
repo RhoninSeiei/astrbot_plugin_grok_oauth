@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "observed_date": "2026-10-07",
+  "code_adaptation": "No third-party source files copied into plugin runtime. Protocol and host interface references only.",
+  "repositories": [
+    {
+      "repository": "anomalyco/opencode",
+      "ref": "dev",
+      "commit": "57ef3828431790c53f8f333c7ffbfe88770a1812",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "files": [
+        {
+          "path": "packages/opencode/src/plugin/xai.ts",
+          "blob_sha": "a455121d6aedfac1ee9f68bd4f6d455ce5a86eba",
+          "sha256": "78824ab8e2c6503eff34dff5031959b8ae1979ef7505d1d9904a703166602b18",
+          "url": "https://github.com/anomalyco/opencode/blob/57ef3828431790c53f8f333c7ffbfe88770a1812/packages/opencode/src/plugin/xai.ts",
+          "adoption": "reference_only_no_code_copied"
+        }
+      ]
+    },
+    {
+      "repository": "AstrBotDevs/AstrBot",
+      "ref": "master",
+      "commit": "2f504d3235b6e415ea23087fee0ec15f475f4f7b",
+      "license_spdx": "AGPL-3.0",
+      "license_path": "LICENSE",
+      "files": [
+        {
+          "path": "astrbot/core/provider/register.py",
+          "blob_sha": "409f22f376d24b18bdbdc5108d730f4c90006533",
+          "sha256": "596f9090fbd6dc7e97259b678865c92aeb126b5a7eb563e7836bc432d50984e4",
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/2f504d3235b6e415ea23087fee0ec15f475f4f7b/astrbot/core/provider/register.py",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "astrbot/core/provider/sources/openai_responses_source.py",
+          "blob_sha": "c5cb9bdb8245e7a4b3da8470262b4c751ec30eb7",
+          "sha256": "78a0a2e6af3fb3d8c0e5c075bae9a578cc74733421da9e5886112fdf4dfc8a6d",
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/2f504d3235b6e415ea23087fee0ec15f475f4f7b/astrbot/core/provider/sources/openai_responses_source.py",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "astrbot/core/core_lifecycle.py",
+          "blob_sha": "9961a8c52b3d4ba93fd7ad2ddc380bd308594d6f",
+          "sha256": "11948d6ad696cd0ea6ff2294c59c6375392fe3f50a99ab40bb0412685f90d695",
+          "url": "https://github.com/AstrBotDevs/AstrBot/blob/2f504d3235b6e415ea23087fee0ec15f475f4f7b/astrbot/core/core_lifecycle.py",
+          "adoption": "reference_only_no_code_copied"
+        }
+      ]
+    },
+    {
+      "repository": "xai-org/grok-build",
+      "ref": "fixed reference",
+      "commit": "4247f661689354b831191f11eeeac8424993fe3d",
+      "license_spdx": "Apache-2.0",
+      "license_path": "LICENSE",
+      "license_blob_sha": "90b1793cf8eb2d6444863591e8405ecc707dc62d",
+      "files": [
+        {
+          "path": "crates/codegen/xai-grok-http/src/lib.rs",
+          "blob_sha": "ffa282040759894da30d4d3e57e939dff2f795ff",
+          "sha256": "1e5442603498509b4aba28cd89e1a54e1d4ab6495089e9473e2367501b53ea8c",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-http/src/lib.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-login/src/config.rs",
+          "blob_sha": "adc40cd45045316adf47221b957fb7b269ea599c",
+          "sha256": "d8dcacfe946bcbba49de61fc33505a0a72935644b060e2c1d0ca2d88b86650b5",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-login/src/config.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-login/src/device_code.rs",
+          "blob_sha": "607f111a032a60b7178954ead3e331dde20d694f",
+          "sha256": "a10f5e79c3d64565f3acc8a0d7b40b047fe6caad2f6c33ea08ca9a2e2121af09",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-login/src/device_code.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-login/src/oidc/protocol.rs",
+          "blob_sha": "556360f778ec09fe88fe8c424898ef7a708b6871",
+          "sha256": "ea3ae0e32775d05002d2526d8dc7ded20e9396446dc459ed8964dbbba8859936",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-login/src/oidc/protocol.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-shell/src/agent/config.rs",
+          "blob_sha": "b3b099258b66375c6f5668569dde743ad871e6b7",
+          "sha256": "2d7d6ea2044052f6b8ecd23f3bafb84f782d9bc571011248fcfaab2aac3ea823",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-shell/src/agent/config.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-shell/src/extensions/billing.rs",
+          "blob_sha": "dbdc67562f36969c6548e369435b8d2c42981ce5",
+          "sha256": "ce72d40f80b3089a1b34040999c14a450400d6bc4a576f4078fb767943da89fe",
+          "url": "https://github.com/xai-org/grok-build/blob/4247f661689354b831191f11eeeac8424993fe3d/crates/codegen/xai-grok-shell/src/extensions/billing.rs",
+          "adoption": "reference_only_no_code_copied"
+        }
+      ],
+      "adoption": "reference_only_no_code_copied"
+    },
+    {
+      "repository": "xai-org/grok-build",
+      "ref": "fixed video protocol reference",
+      "commit": "2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8",
+      "observed_date": "2026-10-07",
+      "license_spdx": "Apache-2.0",
+      "license_path": "LICENSE",
+      "license_blob_sha": "90b1793cf8eb2d6444863591e8405ecc707dc62d",
+      "license_sha256": "116f7778b9802e569b7fa3a532b17bd80eb13c67837def01eed093d4ea472f28",
+      "files": [
+        {
+          "path": "crates/codegen/xai-grok-tools/src/implementations/grok_build/video_gen/mod.rs",
+          "blob_sha": "5b5457b5df884fdef4054fd870770a42b8619a94",
+          "sha256": "46831a241cf8ee3fa1f530c82414cb065a6c6e3a82f30e7f59200e4435e1b71c",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-tools/src/implementations/grok_build/video_gen/mod.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-tools/src/implementations/grok_build/media_bearer.rs",
+          "blob_sha": "34427d2f51e9a118282c46c703d4d606e2e7ab2f",
+          "sha256": "04a27095940cc32ea310750898f81fc07020bd71dfca4b664939d902af747d10",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-tools/src/implementations/grok_build/media_bearer.rs",
+          "adoption": "reference_only_no_code_copied"
+        },
+        {
+          "path": "crates/codegen/xai-grok-login/src/side_call_bearer.rs",
+          "blob_sha": "dab482319f2260a40473972e492cafff32f24a11",
+          "sha256": "6e7ddb6fa1a730d3569f6c99c43b1f9a1da2b878a100b640a20addddd702de72",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-login/src/side_call_bearer.rs",
+          "adoption": "reference_only_no_code_copied"
+        }
+      ],
+      "adoption": "reference_only_no_code_copied"
+    }
+  ],
+  "protocol_sources": [
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/text/generate-text",
+      "used_for": "Responses stateless input, encrypted reasoning replay"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/text/streaming",
+      "used_for": "Responses streaming event shape"
+    },
+    {
+      "url": "https://docs.x.ai/developers/tools/function-calling",
+      "used_for": "Function call inputs and results"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+      "used_for": "Model-specific reasoning effort including grok-4.6 xhigh"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/images/generation",
+      "used_for": "Direct Images JSON, b64_json and geometry"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/images/editing",
+      "used_for": "JSON single-image editing"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
+      "used_for": "Ordered inputs and current five-image limit"
+    },
+    {
+      "url": "https://docs.astrbot.app/dev/star/plugin-new.html",
+      "used_for": "Metadata, dependency and standard plugin conventions"
+    },
+    {
+      "url": "https://docs.x.ai/developers/rest-api-reference/inference/videos",
+      "used_for": "Video task submission, polling and result schema"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/video/generation",
+      "used_for": "Text-to-video and image-to-video generation request contract"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/video/editing",
+      "used_for": "Video-only editing, duration constraint and output geometry"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video",
+      "used_for": "Reference-to-video cannot be combined with video editing"
+    },
+    {
+      "url": "https://docs.astrbot.app/dev/star/guides/send-message.html",
+      "used_for": "Video message components and caller-owned delivery through unified message origin"
+    }
+  ],
+  "not_adopted": [
+    {
+      "repository": "NousResearch/hermes-agent",
+      "reason": "Implemented Images from current xAI primary protocol; no Hermes source adaptation"
+    },
+    {
+      "repository": "openclaw/openclaw",
+      "reason": "Python-only native adapter; no OpenClaw runtime or source adaptation"
+    }
+  ]
+}

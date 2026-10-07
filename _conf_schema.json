@@ -1,0 +1,130 @@
+{
+  "oauth_client_id": {
+    "type": "string",
+    "description": "OAuth 客户端 ID",
+    "hint": "默认使用公开 Grok CLI 客户端。可从插件的“授权与设置”页面直接开始登录，无需先添加模型。",
+    "default": "b1a00492-073a-47ea-816f-4c329264a828"
+  },
+  "oauth_client_profile": {
+    "type": "string",
+    "description": "OAuth 客户端配置名称",
+    "default": "public-grok-cli-reference"
+  },
+  "proxy": {
+    "type": "string",
+    "description": "本插件 OAuth 和推理出站代理",
+    "hint": "留空表示直接连接；不修改其他提供商的代理设置。",
+    "default": ""
+  },
+  "transport_diagnostics": {
+    "type": "bool",
+    "description": "记录 Grok 推理传输诊断日志",
+    "hint": "默认关闭。开启后仅记录阶段、耗时、状态、重试次数和安全分类，不记录请求或响应内容。",
+    "default": false
+  },
+  "transport_debug_file": {
+    "type": "bool",
+    "description": "保存独立脱敏传输调试文件",
+    "hint": "默认关闭。记录到本插件数据目录 debug/transport.jsonl，最多两个 1 MiB 文件；仅记录脱敏诊断，不收集第三方原始日志、凭据或正文。修改后重载插件。",
+    "default": false
+  },
+  "reasoning_effort": {
+    "type": "string",
+    "description": "默认推理强度",
+    "hint": "留空使用模型默认值；按当前模型能力检查。",
+    "default": ""
+  },
+  "images_enabled": {
+    "type": "bool",
+    "description": "启用图片生成与编辑",
+    "default": true
+  },
+  "image_model": {
+    "type": "string",
+    "description": "Imagine 图片模型",
+    "default": "grok-imagine-image-2.0"
+  },
+  "image_timeout": {
+    "type": "int",
+    "description": "图片请求总超时秒数",
+    "hint": "包含排队和保存，最大600秒。",
+    "default": 180
+  },
+  "tools_enabled": {
+    "type": "bool",
+    "description": "启用 Agent 图片与视频工具",
+    "default": true
+  },
+  "tools_provider_id": {
+    "type": "string",
+    "description": "指定图片与视频提供商实例 ID",
+    "hint": "留空时仅当前 Grok OAuth 主模型使用媒体工具；指定后允许其他主模型调用此 Grok 实例。",
+    "default": ""
+  },
+  "media_hosts": {
+    "type": "list",
+    "description": "允许下载媒体的 HTTPS 主机",
+    "hint": "精确域名，不填URL。视频结果默认允许vidgen.x.ai；此列表可增加其他HTTPS主机。不会向下载主机发送OAuth令牌。",
+    "default": []
+  },
+  "allowed_image_roots": {
+    "type": "list",
+    "description": "额外允许读取的图片目录",
+    "hint": "仅添加可信图片目录；默认允许 AstrBot 临时目录和本插件资产目录。",
+    "default": []
+  },
+  "search_enabled": {
+    "type": "bool",
+    "description": "启用 Grok 网页搜索能力",
+    "hint": "允许显式搜索和按需搜索工具；不会在每次对话前自动搜索。",
+    "default": true
+  },
+  "search_tools_enabled": {
+    "type": "bool",
+    "description": "向 Agent 提供 Grok 网页搜索工具",
+    "hint": "工具名为 grok_web_search，由模型按需选择。调用方可通过 oauth_web_search=disabled 禁止本次搜索。",
+    "default": true
+  },
+  "search_provider_id": {
+    "type": "string",
+    "description": "供其他主模型使用的 Grok 搜索实例 ID",
+    "hint": "留空时仅当前 Grok OAuth 主模型可用；指定后允许其他主模型调用该 Grok 实例。Grok 主模型优先使用自身来源。",
+    "default": ""
+  },
+  "search_timeout": {
+    "type": "int",
+    "description": "专用网页搜索总超时秒数",
+    "hint": "包含认证和请求，最大600秒；还受调用方工具超时限制。",
+    "default": 60
+  },
+  "usage_tools_enabled": {
+    "type": "bool",
+    "description": "启用按需额度工具",
+    "hint": "仅供 Grok 模型按需调用，普通用户可查询。命令与管理页不依赖此开关。",
+    "default": true
+  },
+  "usage_group_allowlist": {
+    "type": "list",
+    "description": "允许额度查询的群会话",
+    "hint": "填完整 unified_msg_origin；空列表拒绝所有群聊。开放后普通用户可通过 Grok 工具查询，命令仍仅限管理员。",
+    "default": []
+  },
+  "videos_enabled": {
+    "type": "bool",
+    "description": "启用图生视频与视频编辑",
+    "hint": "文生和图生视频支持6或10秒；编辑接受本插件当前会话已生成或受控导入、时长不超过8.7秒的视频。生成、查询和读取由本插件提供，发送及通知由调用插件负责。",
+    "default": true
+  },
+  "video_source_hosts": {
+    "type": "list",
+    "description": "额外允许导入视频的HTTPS主机",
+    "hint": "精确域名，不填URL。QQ临时视频来源multimedia.nt.qq.com.cn内置支持；其他主机须通过公网DNS校验。禁止任意模型生成的URL充当消息附件。",
+    "default": []
+  },
+  "allowed_video_roots": {
+    "type": "list",
+    "description": "明确允许导入视频的本地目录",
+    "hint": "默认空列表拒绝所有本地视频路径。优先传真实消息HTTPS来源或data:video/mp4;base64；此项不会复用或扩大图片目录权限。",
+    "default": []
+  }
+}
