@@ -1,0 +1,42 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+credentials*.json
+tokens*.json
+*.pem
+*.key
+*.p12
+auth-state/
+secrets/
+
+# Runtime state, media, raw logs and reports
+data/
+plugin_data/
+assets/
+*.log
+*.sqlite*
+*.db
+unit.xml
+integration*.xml
+live.xml
+test-results/
+artifacts/
+dist/
+*.zip
+*.whl
+
+# Local tooling and research copies
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+.idea/
+.vscode/
+.agents/
+.codex/
+research-checkouts/

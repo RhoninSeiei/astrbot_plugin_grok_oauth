@@ -1,0 +1,58 @@
+name: Auto-assign issues and pull requests
+
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request_target:
+    types: [opened, reopened]
+  workflow_dispatch:
+    inputs:
+      number:
+        description: Existing issue or pull request number
+        required: true
+        type: string
+
+permissions: {}
+
+jobs:
+  assign:
+    if: github.repository == 'RhoninSeiei/astrbot_plugin_grok_oauth'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      # Never check out or execute contributor code with pull_request_target.
+      - name: Assign to repository maintainer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import json
+          import os
+          import urllib.request
+
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as file:
+              event = json.load(file)
+          item = event.get("issue") or event.get("pull_request") or {}
+          number = int(item.get("number") or event.get("inputs", {}).get("number", 0))
+          if number <= 0:
+              raise ValueError("A positive issue or pull request number is required")
+          repo = "RhoninSeiei/astrbot_plugin_grok_oauth"
+          request = urllib.request.Request(
+              f"https://api.github.com/repos/{repo}/issues/{number}/assignees",
+              data=json.dumps({"assignees": ["RhoninSeiei"]}).encode(),
+              headers={
+                  "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                  "Accept": "application/vnd.github+json",
+                  "Content-Type": "application/json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+              },
+              method="POST",
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              result = json.load(response)
+          if not any(user["login"] == "RhoninSeiei" for user in result["assignees"]):
+              raise RuntimeError("Maintainer was not assigned")
+          print(f"Assigned #{number} to RhoninSeiei")
